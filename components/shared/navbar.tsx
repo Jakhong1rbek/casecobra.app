@@ -4,10 +4,12 @@ import { Button } from '../ui/button'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Separator } from '../ui/separator'
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 
-const Navbar = () => {
-	const user = undefined
-	const isAdmin = false
+const Navbar = async () => {
+	const { getUser } = getKindeServerSession()
+	const user = await getUser()
+	const isAdmin = user?.email === process.env.ADMIN_PANEL
 	return (
 		<div className='sticky inset-x-0 top-0 z-[100] h-14 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all '>
 			<MaxWidthWrapper>
@@ -22,10 +24,10 @@ const Navbar = () => {
 
 								{isAdmin ? (
 									<Button variant={'ghost'} size={'sm'}>
-										<Link href={'api/auth/logout'}>Dashboard✨</Link>
+										<Link href={'api/auth/logout'}>Dashboard ✨</Link>
 									</Button>
 								) : null}
-								<Button
+								{/* <Button
 									variant={'ghost'}
 									size={'sm'}
 									className='hidden items-center gap-1 sm:flex'
@@ -33,16 +35,16 @@ const Navbar = () => {
 									<Link href={'configuire/upload'}>
 										Create case <ArrowRight className='ml-1.5 size-5' />
 									</Link>
-								</Button>
+								</Button> */}
 							</>
 						) : (
 							<>
 								<Button variant={'ghost'} size={'sm'}>
-									<Link href={'api/auth/register'}>Sign up</Link>
+									<Link href={'/api/auth/register'}>Sign up</Link>
 								</Button>
 
 								<Button variant={'ghost'} size={'sm'}>
-									<Link href={'api/auth/login'} className='flex items-center'>
+									<Link href={'/api/auth/login'} className='flex items-center'>
 										Log in
 									</Link>
 								</Button>
