@@ -2,6 +2,7 @@
 import MaxWidthWrapper from '@/components/shared/max-width-wrapper'
 import Phone from '@/components/shared/phone'
 import { Check, Star } from 'lucide-react'
+import ValueProposition from '../_components/value'
 
 export default function HomePage() {
 	return (
@@ -98,6 +99,9 @@ export default function HomePage() {
 					</div>
 				</div>
 			</MaxWidthWrapper>
+
+			<ValueProposition />
 		</div>
+		// {value proposition section}
 	)
 }
