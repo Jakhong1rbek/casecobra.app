@@ -1,46 +1,44 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import MaxWidthWrapper from '@/components/shared/max-width-wrapper'
-import Phone from '@/components/shared/phone'
-import { ArrowRight, Check, Star } from 'lucide-react'
+import { Check, Star } from 'lucide-react'
 import ValueProposition from '../_components/value'
-import { Icons } from '@/components/shared/icons'
-import Link from 'next/link'
-import { buttonVariants } from '@/components/ui/button'
 
 export default function HomePage() {
 	return (
-		<div className='bg-slate-50'>
-			<MaxWidthWrapper className=' pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-3 lg:gap-x-0 lg:pb-52 lg:pt-24 xl:gap-x-8 xl:pt-32 '>
+		<div className=''>
+			<MaxWidthWrapper className=' pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-3 lg:gap-x-0 lg:pb-52 lg:pt-24 xl:gap-x-8 xl:pt-10 '>
 				<div className='col-span-2 px-6 lg:px-0 lg:pt-4'>
 					<div className='relative mx-auto flex flex-col items-center text-center lg:items-start lg:text-left'>
-						<div className='absolute -top-20 left-0 hidden w-28 lg:block'>
+						{/* <div className='absolute -top-20 left-0 hidden w-28 lg:block'>
 							<img src='/snake-1.png' className='w-full' alt='snake' />
-						</div>
-						<h1 className='relative mt-16  w-fit text-balance text-5xl font-bold !leading-tight tracking-tight text-gray-900 md:text-6xl  lg:text-7xl'>
-							Your image on a{' '}
-							<span className='bg-green-600 px-2 text-white'>Custom</span> Phone
-							Case
+						</div> */}
+						<h1 className='relative mt-16  w-fit text-balance text-5xl font-bold !leading-tight tracking-tight md:text-6xl  lg:text-5xl'>
+							Bizning javonlarimiz orasidan keyingi ajoyib{' '}
+							<span className='rounded-sm bg-blue-600 px-2 '>kitobingizni</span>{' '}
+							toping.
 						</h1>
-						<p className='"lg:text-left mt-8  max-w-prose text-balance text-center text-lg md:text-wrap lg:pr-10'>
-							Capture your favorite memories with your own,{' '}
-							<span className='font-semibold'>one-of-one</span> phone case.
-							Casecobra allows you to protect your memories, not just your phone
-							case
+						<p className='"lg:text-left mt-8  max-w-prose text-balance  text-lg md:text-wrap lg:pr-10'>
+							Har bir kitob o'ziga jalb qiladigan, har bir hikoya sehrlab
+							qo'yadigan va har bir o'quvchi g'ayrioddiy kashfiyot va tasavvur
+							sayohatiga otlanadigan{' '}
+							<span className='rounded-sm bg-blue-600 px-2'>IQRO</span> ga qadam
+							qo'ying.
 						</p>
 						<ul className='mt-8 flex flex-col items-center space-y-2 text-left font-medium sm:items-start'>
 							<div className='space-y-2'>
 								<li className='flex items-center gap-1.5 text-left'>
-									<Check className='size-5 shrink-0 text-green-600' />
-									High-quality, durable material
+									<Check className='size-5 shrink-0 text-blue-600' />
+									Faqat siz uchun tanlangan kitoblar{' '}
 								</li>
 								<li className='flex items-center gap-1.5 text-left'>
-									<Check className='size-5 shrink-0 text-green-600' />5 year
-									print guarantee
+									<Check className='size-5 shrink-0 text-blue-600' />
+									Mutaxassis tavsiyalari va do'stona xizmat{' '}
 								</li>
 								<li className='flex items-center gap-1.5 text-left'>
-									<Check className='size-5 shrink-0 text-green-600' />
-									Modern Iphone models supported
+									<Check className='size-5 shrink-0 text-blue-600' />
+									Kitob ixlosmandlari uchun qulay joy{' '}
 								</li>
 							</div>
 						</ul>
@@ -49,27 +47,27 @@ export default function HomePage() {
 								<img
 									src='/users/user-1.png'
 									alt='user image'
-									className='inline-block size-10 rounded-full ring-2 ring-slate-100'
+									className='inline-block size-10 rounded-full ring-2'
 								/>
 								<img
 									src='/users/user-2.png'
 									alt='user image'
-									className='inline-block size-10 rounded-full ring-2 ring-slate-100'
+									className='inline-block size-10 rounded-full ring-2'
 								/>
 								<img
 									src='/users/user-3.png'
 									alt='user image'
-									className='inline-block size-10 rounded-full ring-2 ring-slate-100'
+									className='inline-block size-10 rounded-full ring-2'
 								/>
 								<img
 									src='/users/user-4.jpg'
 									alt='user image'
-									className='inline-block size-10 rounded-full ring-2 ring-slate-100'
+									className='inline-block size-10 rounded-full ring-2'
 								/>
 								<img
 									src='/users/user-5.jpg'
 									alt='user image'
-									className='inline-block size-10 rounded-full ring-2 ring-slate-100'
+									className='inline-block size-10 rounded-full ring-2 '
 								/>
 							</div>
 							<div className='flex flex-col items-center justify-between sm:items-start'>
@@ -81,7 +79,8 @@ export default function HomePage() {
 									<Star className='size-4 fill-green-600 text-green-600' />
 								</div>
 								<p>
-									<span className='font-semibold'>1,250</span> happy customers
+									<span className='font-semibold'>1,250</span> Hursand
+									Mijozlarimiz
 								</p>
 							</div>
 						</div>
@@ -89,31 +88,35 @@ export default function HomePage() {
 				</div>
 				<div className='col-span-full  mt-32 flex h-fit w-full justify-center px-8 sm:px-16 md:px-0 lg:col-span-1 lg:mx-0 lg:mt-20'>
 					<div className='relative md:max-w-xl'>
-						<img
+						{/* <img
 							src='/your-image.png'
 							alt='your image'
 							className='absolute -top-20 left-56 hidden w-40 select-none sm:block lg:hidden lg:w-52 xl:block'
-						/>
+						/> */}
 						<img
 							src='/line.png'
 							alt='line'
 							className='absolute -bottom-6 -left-6 w-20 select-none'
 						/>
-						<Phone className='w-64' imgSrc={'/testimonials/1.jpg'} />
+						<img
+							src='/main.jpg'
+							alt='main books'
+							className='h-[500px] rounded-lg object-cover'
+						/>
 					</div>
 				</div>
 			</MaxWidthWrapper>
 
 			<ValueProposition />
-			<section>
+			{/* <section>
 				<MaxWidthWrapper className='py-24'>
 					<div className='mb-12 px-16 lg:px-8'>
 						<div className='mx-auto max-w-2xl sm:text-center'>
-							<h2 className='mg:text-6xl order-1  mt-2 text-balance text-center text-5xl font-bold !leading-tight tracking-tight text-gray-600'>
+							<h2 className='mg:text-6xl order-1  mt-2 text-balance text-center text-5xl font-bold !leading-tight tracking-tight'>
 								Upload your photo and get
 								<span className='relative px-2'>
 									your own case
-									<Icons.underline className='pointer-events-none absolute inset-x-0  -bottom-6 hidden text-green-600 sm:block' />{' '}
+									<Icons.underline className='pointer-events-none absolute inset-x-0  -bottom-6 hidden text-blue-600 sm:block' />{' '}
 								</span>{' '}
 								now
 							</h2>
@@ -168,7 +171,7 @@ export default function HomePage() {
 						</div>
 					</ul>
 				</MaxWidthWrapper>
-			</section>
+			</section> */}
 		</div>
 	)
 }

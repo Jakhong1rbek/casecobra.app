@@ -5,7 +5,7 @@ interface PhoneProps extends HTMLAttributes<HTMLDivElement> {
 	imgSrc: string
 	dark?: boolean
 }
-const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
+const Phone = ({ imgSrc, className, dark = true, ...props }: PhoneProps) => {
 	return (
 		<div
 			className={cn(
@@ -15,11 +15,7 @@ const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
 			{...props}
 		>
 			<img
-				src={
-					dark
-						? '/phone-template-dark-edges.png'
-						: '/phone-template-white-edges.png'
-				}
+				src={imgSrc}
 				alt='phone image'
 				className='pointer-events-none z-50 select-none'
 			/>

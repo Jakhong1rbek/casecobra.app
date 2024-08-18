@@ -8,12 +8,12 @@ import Phone from './phone'
 import { useInView } from 'framer-motion'
 
 const PHONES = [
-	'/testimonials/1.jpg',
-	'/testimonials/2.jpg',
-	'/testimonials/3.jpg',
-	'/testimonials/4.jpg',
-	'/testimonials/5.jpg',
-	'/testimonials/6.jpg',
+	'/testimonials/bank.png',
+	'/testimonials/2.png',
+	'/testimonials/1.png',
+	'/testimonials/8.png',
+	'/testimonials/5.png',
+	'/testimonials/6.png',
 ]
 
 function splitArray<T>(array: Array<T>, numParts: number) {
@@ -149,8 +149,9 @@ function ReviewGrid() {
 					/>
 				</>
 			) : null}
-			<div className='pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-100' />
-			<div className='pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-100' />
+			<div className='pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b ' />
+
+			<div className='pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t ' />
 		</div>
 	)
 }
