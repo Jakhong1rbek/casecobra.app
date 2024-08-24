@@ -15,7 +15,6 @@ import {
 } from '../ui/dropdown-menu'
 import ProfileTrigger from './profile-trigger'
 import ModeToggle from './mode-toggle'
-import ContactForm from '../forms/contact'
 
 const Navbar = async () => {
 	const { getUser } = getKindeServerSession()

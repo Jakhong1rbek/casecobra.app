@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 }
 function ContactPage() {
 	return (
-		<div className='mx-auto max-w-6xl mb-40 max-md:mb-12 max-md:ml-10   '>
+		<div className='mx-auto mb-40 max-w-6xl max-md:mb-12 max-md:ml-10   '>
 			<div className='relative flex min-h-[20vh] flex-col items-center justify-center   '>
 				<h1 className='  text-4xl max-md:text-3xl'>
-					<span>Bog'lanish</span>
+					<span>Bog&apos;lanish</span>
 				</h1>
 				<div className='mt-4 flex items-center gap-2'>
 					<Link href={'/'} className='flex items-center gap-2'>
@@ -18,14 +18,17 @@ function ContactPage() {
 						<span className='hover:underline'>IQRO</span>
 					</Link>
 					<Dot />
-					<p className='text-muted-foreground'>Bog'lanish</p>
+					<p className='text-muted-foreground'>Bog&apos;lanish</p>
 				</div>
 			</div>
 			<div className='grid grid-cols-2 gap-4 max-md:grid-cols-1'>
 				<div className='flex flex-col '>
-					<h1 className=' text-4xl max-md:text-3xl'>"IQRO" bilan bog'lanish</h1>
+					<h1 className=' text-4xl max-md:text-3xl'>
+						IQRO bilan bog&apos;lanish
+					</h1>
 					<p className='mt-2 text-muted-foreground'>
-						Murojat va takliflar uchun companiya bilan bog'lanish bo'limi.
+						Murojat va takliflar uchun companiya bilan bog&apos;lanish
+						bo&apos;limi.
 					</p>
 					<div className='mt-12 flex items-center gap-2'>
 						<Mail className='size-4 ' />
